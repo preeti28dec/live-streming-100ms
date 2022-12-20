@@ -74,7 +74,7 @@ h5 {
 /* ChatNdParticipants */
 .rightBox {
   border-radius: 10px;
-  margin-top: 5%;
+  margin-top: 1%;
   width: 30%;
   background-color: white;
   padding: 30px 25px;
@@ -170,8 +170,7 @@ h5 {
   height: 80px;
   margin-top: 10px;
   /* background-color: white; */
-  border-radius: 10px;
-  gap: 10px;
+  gap: 6px;
 }
 
 .controls .MuiButton-root .MuiSvgIcon-root{
@@ -187,23 +186,27 @@ h5 {
 .controls .MuiButton-root{
   text-transform: unset;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 4px;
 }
-
+.css-zddlty-MuiButtonBase-root-MuiButton-root {
+  min-height: 0px;
+}
 .controls .leave{
   background-color: rgb(241, 110, 110); 
-  padding: 20px;
+ 
 }
 .controls .stopbtn{
   background-color: rgb(241, 110, 110); 
-  padding: 20px;
+
 }
 .controls .video-icon{
-  background-color: rgb(255, 255, 255); 
+  background-color: rgb(110, 167, 241); 
+  color: white;
   padding: 10px;
 }
 .controls .video-icon:hover{
-  background-color: rgb(235, 234, 234); 
+  background-color: rgb(241, 110, 110); 
+  color: white;
   padding: 10px;
 }
 
@@ -289,6 +292,7 @@ video {
 
 /* Stream */
 .stream {
+  margin: 1%;
   border-radius: 10px;
   height: calc(100% - 90px);
   display: flex;
