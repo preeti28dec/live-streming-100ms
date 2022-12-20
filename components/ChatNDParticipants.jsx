@@ -58,7 +58,7 @@ function ChatNdParticipants() {
           <div className="rightBox__participants">
             {/* Participants */}
             {peers.map((peer) => (
-              <div className="rightBox__participant">
+              <div className="rightBox__participant" key={peer.id}>
                 {peer.name}
                 <p>{peer.roleName}</p>
               </div>
