@@ -1,5 +1,5 @@
 import Stream from "./Stream";
-import ChatNdParticipants from "./ChatNdParticipants";
+import ChatNdParticipants from "./ChatNDParticipants";
 import Controls from "./Controls";
 
 function Room() {
