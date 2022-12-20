@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Message from "./Message";
 import {
   selectHMSMessages,
@@ -6,9 +5,10 @@ import {
   useHMSStore,
 } from "@100mslive/react-sdk";
 import { selectPeers } from "@100mslive/react-sdk";
+import { useState } from "react";
 
 function ChatNdParticipants() {
-  const [selectedOption, setSelectedOption] = useState("chat");
+  const [selectedOption, setSelectedOption] = useStatee("chat");
   const [message, setMessage] = useState("");
   const messages = useHMSStore(selectHMSMessages);
   const hmsActions = useHMSActions();
@@ -71,5 +71,3 @@ function ChatNdParticipants() {
 }
 
 export default ChatNdParticipants;
-
-
