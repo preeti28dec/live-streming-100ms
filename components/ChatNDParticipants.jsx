@@ -6,6 +6,7 @@ import {
 } from "@100mslive/react-sdk";
 import { selectPeers } from "@100mslive/react-sdk";
 import { useState } from "react";
+import InputEmoji from "react-input-emoji";
 
 function ChatNdParticipants() {
   const [selectedOption, setSelectedOption] = useState("chat");
@@ -15,7 +16,6 @@ function ChatNdParticipants() {
   const peers = useHMSStore(selectPeers);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     hmsActions.sendBroadcastMessage(message);
     setMessage("");
   };
@@ -45,13 +45,13 @@ function ChatNdParticipants() {
                 <Message key={msg.id} message={msg} />
               ))}
             </div>
-            <form name="send-messge" onSubmit={handleSubmit}>
-              <input
-                onChange={(e) => setMessage(e.target.value)}
-                value={message}
-                placeholder="Write your message"
-              />
-            </form>
+            <InputEmoji
+              value={message}
+              onChange={setMessage}
+              cleanOnEnter
+              onEnter={handleSubmit}
+              placeholder="Type a message"
+            />
           </>
         )}
         {selectedOption === "participants" && (

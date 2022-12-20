@@ -313,3 +313,18 @@ video {
     /* position: absolute; */
   }
 }
+
+
+
+
+@media (max-width:425px){
+  .react-emoji-picker {
+    left: 30px !important;
+  }
+  .emoji-mart-dark {
+    width: 310px !important;
+}
+  .react-emoji-picker--wrapper {
+    right:-30px !important;
+  }
+}
