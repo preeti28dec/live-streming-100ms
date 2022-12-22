@@ -1,18 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background-color: #263238;
+  background-color: #263238;
   color: white;
 }
 
@@ -22,7 +17,6 @@ h3,
 h4,
 h5 {
   font-weight: normal;
-
 }
 
 /* Join Room */
@@ -41,7 +35,9 @@ h5 {
   color: white;
 }
 
-.join input, select, button {
+.join input,
+select,
+button {
   height: 45px;
   border: none;
   outline: none;
@@ -49,17 +45,18 @@ h5 {
   border-radius: 4px;
   border: 1px solid rgb(182, 184, 190);
   font-size: 16px;
-
 }
-.join-btn{
+.join-btn {
   color: white;
 }
 
-.join input::placeholder, select::placeholder{
+.join input::placeholder,
+select::placeholder {
   color: hsl(223, 3%, 56%);
 }
 
-.join input, select{
+.join input,
+select {
   padding: 0 10px;
 }
 
@@ -74,29 +71,38 @@ h5 {
 /* ChatNdParticipants */
 .rightBox {
   border-radius: 10px;
-  margin-top: 1%;
+
   width: 30%;
   background-color: white;
-  padding: 30px 25px;
+  padding: 0px 0px 58px 0px;
 }
 
-
-.rightBox__optionView{
+.rightBox__optionView {
   height: 100%;
 }
 
 .rightBox__head {
   width: 100%;
   text-align: left;
+  display: flex;
+  justify-content: space-around;
   height: fit-content;
+  background: black;
+  padding: 10px;
+  border-radius: 8px;
+  border: 3px solid white;
 }
 
 .rightBox__head .selected {
-  color: black;
+  color: white;
 }
 
-.rightBox__head span{
+.rightBox__head span {
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
   color: #a6a8ab;
   cursor: pointer;
 }
@@ -105,11 +111,11 @@ h5 {
   margin-right: 10px;
 }
 
-.rightBox__chats{
+.rightBox__chats {
   height: calc(100% - 60px);
   overflow: scroll;
-  padding: 10px 0;
-  ms-overflow-style: none;
+  padding: 10px;
+  
   scrollbar-width: none; /* Firefox */
 }
 
@@ -123,23 +129,21 @@ h5 {
   height: 40px;
   background-color: hsl(228, 25%, 88%);
   border-radius: 10px;
-  padding: 24px 10px;
+  padding: 0 10px;
   box-sizing: border-box;
   color: #000;
 }
 
-.rightBox__optionView form input:focus{
+.rightBox__optionView form input:focus {
   outline: none;
 }
 
-.rightBox__participants{
-  padding: 10px 0;
+.rightBox__participants {
+  padding: 10px;
   height: 100%;
   overflow: scroll;
   ms-overflow-style: none;
   scrollbar-width: none; /* Firefox */
- 
-
 }
 
 .rightBox__participants::-webkit-scrollbar {
@@ -147,73 +151,70 @@ h5 {
 }
 
 .rightBox__participant {
-  text-align: left;
-  text-align: left;
-  background-color: #1d84ea;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  color:white;
+  background-color: #000000;
+  padding:5px 12px;
+  /* border-radius: 5px; */
+  font-size: 18px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  color: white;
+  border-radius: 5px;
+  animation: floatup .5s forwards;
+  line-height: 1.5em;
 }
 
-.rightBox__participant p {
-  font-size: 14px;
+.rightBox__participant_role{
+    font-size: 12px;
+    color: rgb(191, 196, 199);
 }
-
 
 /* Controls */
 .controls {
   display: flex;
   /* align-items: center; */
   justify-content: center;
-  padding: 20px ;
+  padding: 20px;
   height: 80px;
   margin-top: 10px;
   /* background-color: white; */
-  gap: 6px;
+  border-radius: 10px;
+  gap: 10px;
 }
 
-.controls .MuiButton-root .MuiSvgIcon-root{
+.controls .MuiButton-root .MuiSvgIcon-root {
   margin-right: 5px;
 }
 
-.controls .MuiButton-root img{
+.controls .MuiButton-root img {
   height: 20px;
   width: 20px;
   margin-left: 5px;
 }
 
-.controls .MuiButton-root{
+.controls .MuiButton-root {
   text-transform: unset;
   padding: 10px;
-  border-radius: 4px;
-}
-.css-zddlty-MuiButtonBase-root-MuiButton-root {
-  min-height: 0px;
-}
-.controls .leave{
-  background-color: rgb(241, 110, 110); 
- 
-}
-.controls .stopbtn{
-  background-color: rgb(241, 110, 110); 
-
-}
-.controls .video-icon{
-  background-color: rgb(110, 167, 241); 
-  color: white;
-  padding: 10px;
-}
-.controls .video-icon:hover{
-  background-color: rgb(241, 110, 110); 
-  color: white;
-  padding: 10px;
+  border-radius: 10px;
 }
 
-.controls .leave:hover{
-  background-color: rgb(242, 87, 87); 
+.controls .leave {
+  background-color: rgb(241, 110, 110);
+  padding: 20px;
+}
+.controls .stopbtn {
+  background-color: rgb(241, 110, 110);
+  padding: 20px;
+}
+.controls .video-icon {
+  background-color: rgb(255, 255, 255);
+}
+.controls .video-icon:hover {
+  background-color: rgb(235, 234, 234);
 }
 
+.controls .leave:hover {
+  background-color: rgb(242, 87, 87);
+}
 
 /* HlsView and VideoTile */
 video {
@@ -228,9 +229,8 @@ video {
   height: unset;
 }
 
-
 /* Message */
-.message{
+.message {
   width: fit-content;
   text-align: left;
   max-width: 90%;
@@ -242,38 +242,60 @@ video {
 }
 
 .message p {
-  background-color: hsl(180, 1%, 47%);
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 14px;
+  /* background-color: hsl(180, 11%, 87%); */
+  background-color: #000000;
+  padding:5px 12px;
+  /* border-radius: 5px; */
+  font-size: 18px;
   overflow: hidden;
   margin-bottom: 5px;
-  color:white;
+  color: white;
+  border-radius: 5px;
+  border-top-left-radius: 1.4rem;
+  border-bottom-left-radius: 2px;
+  animation: floatup .5s forwards;
+  line-height: 1.5em;
+
 }
 
-.myMessage{
+@keyframes floatup {
+  from {
+      transform: translateY(14px);
+      opacity: .0;
+  }
+  to {
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+
+.myMessage {
   margin-left: auto;
   text-align: right;
 }
 
-.myMessage p{
-  background-color: #1d84ea;
+.myMessage p {
+  background-color: rgb(92 92 92);
   color: white;
-  padding: 10px;
+  padding: 5px 12px;
+  font-size: 18px;
+  border-radius: 5px;
+  border-top-right-radius: 1.4rem;
+  border-bottom-right-radius: 2px;
+  animation: floatup .5s forwards;
 }
-
 
 /* Room */
 .room {
   display: flex;
-  width: 99%;
+  width: 100vw;
   height: 95vh;
   border-radius: 10px;
+  margin-top: 1%;
   gap: 10px;
 }
 
-
-.room__streamSpace{
+.room__streamSpace {
   width: 100%;
   height: 100%;
 }
@@ -289,10 +311,8 @@ video {
   overflow: hidden;
 }
 
-
 /* Stream */
 .stream {
-  margin: 1%;
   border-radius: 10px;
   height: calc(100% - 90px);
   display: flex;
@@ -302,29 +322,39 @@ video {
   flex-wrap: wrap;
   overflow: hidden;
 }
-@media (max-width:426px) {
-  .room{
-    flex-wrap: wrap;
-  }
-  .rightBox{
-    width: 95%;
-    height: 500px;
-    margin: auto;
-    /* position: absolute; */
-  }
+.react-emoji{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  background: black;
+  border-radius: 8px 8px 0px 0px;
+  padding: 8px;
 }
 
-
-
-
-@media (max-width:425px){
+@media (max-width: 426px) {
+  .room {
+    flex-wrap: wrap;
+  }
+  .rightBox {
+    width: 100%;
+    height: 300px;
+    scroll-behavior: smooth;
+    padding-bottom: 50px;
+  }
   .react-emoji-picker {
     left: 30px !important;
   }
-  .emoji-mart-dark {
+  .emoji-mart.emoji-mart-light {
     width: 310px !important;
 }
-  .react-emoji-picker--wrapper {
-    right:-30px !important;
-  }
+.react-emoji-picker--wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 9px;
+  height: 357px;
+  width: 349px;
+  overflow: hidden;
+  z-index: 10;
+}
 }
